@@ -1,11 +1,16 @@
 {
   "name": "@audiowalk-cz/components",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/audiowalk-cz/components.git"
+  },
   "scripts": {
     "dev": "ng build --watch",
     "build": "ng build"
   },
   "devDependencies": {
+    "@angular/cli": "^18.2.1",
     "@angular-devkit/build-angular": "^18.2.1",
     "ng-packagr": "^18.2.1",
     "typescript": "^5.5.4"
