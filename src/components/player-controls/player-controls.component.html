@@ -1,0 +1,21 @@
+<div class="controls">
+  <div>
+    <div class="skip-animation">
+      <span *ngFor="let item of skipBackItems">-10s</span>
+    </div>
+    <a *ngIf="!hideBack" class="back" (click)="back.emit()"></a>
+  </div>
+  <div>
+    <div class="skip-animation"></div>
+    <ng-container *ngIf="!hidePlay">
+      <a *ngIf="!playing" class="play" (click)="play.emit()"></a>
+      <a *ngIf="playing" class="pause" (click)="pause.emit()"></a>
+    </ng-container>
+  </div>
+  <div>
+    <div class="skip-animation">
+      <span *ngFor="let item of skipForwardItems">+10s</span>
+    </div>
+    <a *ngIf="!hideForward" class="forward" (click)="forward.emit()"></a>
+  </div>
+</div>

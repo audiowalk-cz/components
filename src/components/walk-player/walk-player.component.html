@@ -1,0 +1,9 @@
+<awc-player-controls
+  [playing]="playing()"
+  (back)="back()"
+  (play)="play()"
+  (pause)="pause()"
+  (forward)="forward()"
+></awc-player-controls>
+
+<audio #player [src]="file()"></audio>

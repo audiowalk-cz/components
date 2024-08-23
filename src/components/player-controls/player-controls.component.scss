@@ -1,0 +1,53 @@
+:host {
+  display: block;
+}
+
+.controls {
+  height: 100%;
+  width: 100%;
+}
+.controls a {
+  display: block;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.controls a.back {
+  background-image: url("/assets/images/player-back.svg");
+}
+.controls a.play {
+  background-image: url("/assets/images/player-play.svg");
+}
+.controls a.pause {
+  background-image: url("/assets/images/player-pause.svg");
+}
+.controls a.forward {
+  background-image: url("/assets/images/player-forward.svg");
+}
+
+.skip-animation {
+  margin-bottom: 10px;
+  height: 20px;
+
+  span {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    animation: fadeOut;
+    animation-duration: 0.5s;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

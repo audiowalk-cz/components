@@ -1,0 +1,20 @@
+{
+  "name": "@audiowalk-cz/components",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "ng build --watch",
+    "build": "ng build"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.1",
+    "ng-packagr": "^18.2.1",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "@angular/common": "^18.2.1",
+    "@angular/core": "^18.2.1"
+  },
+  "files": [
+    "dist"
+  ]
+}
