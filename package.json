@@ -1,5 +1,5 @@
 {
-  "name": "@audiowalk/components",
+  "name": "@audiowalk-cz/components",
   "version": "1.0.1",
   "repository": {
     "type": "git",
@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "ng build --watch",
-    "build": "ng build"
+    "build": "ng build",
+    "prepublishOnly": "exit 1"
   },
   "devDependencies": {
     "@angular/cli": "^18.2.1",
@@ -20,6 +21,6 @@
     "@angular/core": "^18.2.1"
   },
   "files": [
-    "dist"
+    "dist/*"
   ]
 }
