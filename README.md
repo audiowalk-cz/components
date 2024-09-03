@@ -1,3 +1,3 @@
 # Audiowalk/Components
 
-Angular components for building audiowlak apps
+Angular components for building audiowalk apps
