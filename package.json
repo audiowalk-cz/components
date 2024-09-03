@@ -5,14 +5,19 @@
     "type": "git",
     "url": "git+https://github.com/audiowalk-cz/components.git"
   },
+  "main": "src/main.ts",
   "scripts": {
     "dev": "ng build --watch",
     "build": "ng build",
-    "prepublishOnly": "exit 1"
+    "prepublishOnly": "exit 1",
+    "release": "git switch release && git merge master --ff-only && git push --follow-tags && git switch master",
+    "release:patch": "git switch master && git pull && npm version patch && git push && npm run release",
+    "release:minor": "git switch master && git pull && npm version minor && git push && npm run release",
+    "release:major": "git switch master && git pull && npm version major && git push && npm run release"
   },
   "devDependencies": {
-    "@angular/cli": "^18.2.1",
     "@angular-devkit/build-angular": "^18.2.1",
+    "@angular/cli": "^18.2.1",
     "ng-packagr": "^18.2.1",
     "typescript": "^5.5.4"
   },

@@ -23,6 +23,7 @@ export class WalkPlayerComponent implements AfterViewInit {
   file = input<string | null>(null);
 
   playOnInit = input<boolean>(false);
+  autoSave = input<boolean>(true);
 
   title = input<string>("Bílý obraz");
   author = input<string>("Pomezí, z. s.");
@@ -58,7 +59,7 @@ export class WalkPlayerComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     const position = localStorage.getItem(`progress-${this.file()}`);
-    if (position) this.playerElement!.nativeElement.currentTime = parseFloat(position);
+    if (position && this.autoSave()) this.playerElement!.nativeElement.currentTime = parseFloat(position);
 
     if (this.playOnInit()) this.playerElement!.nativeElement.play();
 
